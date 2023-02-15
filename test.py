@@ -170,7 +170,8 @@ for content_path in content_paths:
         content = content.to(device).unsqueeze(0)
         
         with torch.no_grad():
-            output= network(content,style)       
+            output= network(content,style)   
+        print(output)
         output = output.cpu()
                 
         output_name = '{:s}/{:s}_stylized_{:s}{:s}'.format(
